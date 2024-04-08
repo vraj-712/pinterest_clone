@@ -5,11 +5,29 @@ import './index.css'
 import Explore from './pages/Explore.jsx'
 import Home from './pages/Home.jsx'
 import Navbar from './components/Navbar.jsx'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Layout from './Layout.jsx'
+
+const router = createBrowserRouter([
+  {
+    path :'/',
+    element: <Layout />,
+    children:[
+      {
+        path:"",
+        element:<Home />,
+      },
+      {
+        path:"/explore",
+        element:<Explore />,
+      },
+
+    ]
+  }
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Home/> */}
-    <Navbar />
-    <Explore />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

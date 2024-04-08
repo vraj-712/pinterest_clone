@@ -1,15 +1,16 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="relative w-full bg-white">
+    <>
+   <div className="relative w-full bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
           <div className="inline-flex items-center space-x-2">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
                 width="25px"
                 height="25px"
                 viewBox="0 0 48 48"
@@ -18,9 +19,9 @@ const Navbar = () => {
                 <g
                   id="Icons"
                   stroke="none"
-                  stroke-width="1"
+                  strokeWidth="1"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 >
                   <g
                     id="Color-"
@@ -35,73 +36,73 @@ const Navbar = () => {
                 </g>
               </svg>
             </span>
-            {/* <span className="font-bold">DevUI</span> */}
-          </div>
-          <div className="hidden lg:block">
-            <ul className="ml-12 inline-flex space-x-8">
-              <li>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  Explore
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  Create
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex grow justify-center">
-            <input
-              className="flex h-10 w-[550px] rounded-full bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-              type="text"
-              placeholder="Serach"
-              />
-          </div>
-          <div className="ml-2 mt-2 hidden lg:block">
-            <span className="relative inline-block">
-              <img
-                className="w-12 h-12 rounded-full"
-                src="https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgAAAA?rs=1&pid=ImgDetMain"
-                alt="Dan_Abromov"
-              />
-            </span>
-          </div>
-          <div className="ml-2 lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="h-6 w-6 cursor-pointer"
-            >
-              <line x1="4" y1="12" x2="20" y2="12"></line>
-              <line x1="4" y1="6" x2="20" y2="6"></line>
-              <line x1="4" y1="18" x2="20" y2="18"></line>
-            </svg>
+            
+            </div>
+            <div className="hidden lg:block">
+              <ul className="ml-12 inline-flex space-x-8">
+                <li>
+                  <NavLink
+                    to="/"
+                    className={({isActive}) => `inline-flex ${isActive ? 'text-orange-700' : 'text-black'} items-center text-sm font-semibold text-gray-800 hover:text-gray-900`}
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/explore"
+                    className={({isActive}) => `inline-flex ${isActive ? 'text-orange-700' : 'text-black'} items-center text-sm font-semibold text-gray-800 hover:text-gray-900`}
+                  >
+                    Explore
+                  </NavLink>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
+                  >
+                    Create
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex grow justify-center">
+              <input
+                className="flex h-10 w-[550px] rounded-full bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                type="text"
+                placeholder="Serach"
+                />
+            </div>
+            <div className="ml-2 mt-2 hidden lg:block">
+              <span className="relative inline-block">
+                <img
+                  className="w-12 h-12 rounded-full"
+                  src="https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgAAAA?rs=1&pid=ImgDetMain"
+                  alt="Dan_Abromov"
+                />
+              </span>
+            </div>
+            <div className="ml-2 lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6 cursor-pointer"
+              >
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+    </>
   );
 };
 
