@@ -3,7 +3,6 @@ import React from 'react'
 export default function Home() {
   return (
     <>
-    <body style={{backgroundColor:'black'}}>
     <div className="columns-1 xs:columns-1 sm:columns-2 md:columns-4 lg:columns-6 [&>img:not(:first-child)]:mt-6 p-7 ">
         <img src="https://i.pinimg.com/236x/c6/57/51/c6575187a14599b7b3531e8f3e046855.jpg" alt="Image 1" />
         <img src="https://i.pinimg.com/236x/7c/c0/b3/7cc0b3fe8f9dc0ca60acbb49e4a46af1.jpg" alt="Image 1"   />
@@ -33,7 +32,6 @@ export default function Home() {
         <img src="https://source.unsplash.com/DFt3T5r_4FE"/>
         <img src="https://source.unsplash.com/Ebwp2-6BG8E"/>
     </div>
-    </body>
 </>
   )
 }
