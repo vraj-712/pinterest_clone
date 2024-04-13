@@ -3,37 +3,35 @@ import React from 'react'
 export default function Home() {
   return (
     <>
-    <header>
-      {/* Header content goes here */}
-    </header>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-      <div className="bg-white-200 rounded-lg overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="Image 1" className="w-full" />
-      </div>
-      <div className="bg-white-200 rounded-lg overflow-hidden">
-        <img src="https://i.pinimg.com/564x/65/a7/9a/65a79ae8c637ad46c650d83de1d02b1e.jpg" alt="Image 2" className="w-full" />
-      </div>
-      {/* Add more grid items as needed */}
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" className="w-full" alt="Sunset in the mountains"/>
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p class="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div>
+    <div className="columns-1 xs:columns-1 sm:columns-2 md:columns-4 lg:columns-6 [&>img:not(:first-child)]:mt-6 p-7 ">
+        <img src="https://i.pinimg.com/236x/c6/57/51/c6575187a14599b7b3531e8f3e046855.jpg" alt="Image 1" />
+        <img src="https://i.pinimg.com/236x/7c/c0/b3/7cc0b3fe8f9dc0ca60acbb49e4a46af1.jpg" alt="Image 1"   />
+        <img src="https://i.pinimg.com/236x/e8/aa/b0/e8aab0a8a3cfc9fab339a4b288b872c3.jpg" alt="Image 1" />
+        <img src="https://i.pinimg.com/236x/c6/57/51/c6575187a14599b7b3531e8f3e046855.jpg" alt="Image 1" />
+        <img src="https://i.pinimg.com/236x/7c/c0/b3/7cc0b3fe8f9dc0ca60acbb49e4a46af1.jpg" alt="Image 1" />
+        <img src="https://i.pinimg.com/236x/3a/1c/8c/3a1c8ce2556e251ed29752fd7ab095a0.jpg" alt="Image 1"/>
+        <img src="https://i.pinimg.com/236x/c6/57/51/c6575187a14599b7b3531e8f3e046855.jpg" alt="Image 1"/>
+        <img src="https://i.pinimg.com/236x/7c/c0/b3/7cc0b3fe8f9dc0ca60acbb49e4a46af1.jpg" alt="Image 1"/>
+        <img src="https://i.pinimg.com/236x/3a/1c/8c/3a1c8ce2556e251ed29752fd7ab095a0.jpg" alt="Image 1"/>
+        
+        <img src="https://i.pinimg.com/236x/3a/1c/8c/3a1c8ce2556e251ed29752fd7ab095a0.jpg" alt="Image 1" />
+        <img src="https://source.unsplash.com/bYuI23mnmDQ"/>
+        <img src="https://source.unsplash.com/Nllx4R-2c3o"/>
+        <img src="https://source.unsplash.com/lp40q07DIe0"/>
+        <img src="https://source.unsplash.com/wfalq01jJuU"/>
+        <img src="https://source.unsplash.com/rMHNK_skwwU"/>
+        <img src="https://source.unsplash.com/WBMjuGpbrCQ"/>
+        <img src="https://source.unsplash.com/nCUZ5BYBL_o"/>
+        <img src="https://source.unsplash.com/3u4fzMQZhjc"/>
+        <img src="https://source.unsplash.com/haOIqIPSwps"/>
+        <img src="https://source.unsplash.com/3UrYD7NNVxk"/>
+        <img src="https://source.unsplash.com/fm1JKDItlVM"/>
+        <img src="https://source.unsplash.com/qPpq1EVs8vw"/>
+        <img src="https://source.unsplash.com/xRyL63AwZFE"/>
+        <img src="https://source.unsplash.com/XeNKWTiCPNw"/>
+        <img src="https://source.unsplash.com/DFt3T5r_4FE"/>
+        <img src="https://source.unsplash.com/Ebwp2-6BG8E"/>
     </div>
-
-    <footer>
-      {/* Footer content goes here */}
-    </footer>
 </>
   )
 }
