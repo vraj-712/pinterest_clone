@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import Navbar from './components/Navbar.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './Layout.jsx'
+import CreatePage from './pages/CreatePage.jsx'
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,10 @@ const router = createBrowserRouter([
         path:"/explore",
         element:<Explore />,
       },
-
+      {
+        path: "/createPage",
+        element:<CreatePage/>,
+      },
     ]
   }
 ]);

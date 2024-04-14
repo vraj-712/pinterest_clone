@@ -57,12 +57,12 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
+                <NavLink
+                    to="/createPage"
+                    className={({isActive}) => `inline-flex ${isActive ? 'text-orange-700' : 'text-black'} items-center text-sm font-semibold text-gray-800 hover:text-gray-900`}
                   >
-                    Create
-                  </a>
+                     Create
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -102,6 +102,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <hr/>
     </>
   );
 };

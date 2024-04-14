@@ -2,22 +2,6 @@ import React, {useRef, useState} from 'react'
 import SinglePhoto from './SinglePhoto';
 
 export default function Home() {
-  const ref = useRef(null);
-  function showOption(event){
-    let option = event.currentTarget.children[1]
-    if(option.classList.contains('hidden')){
-      option.classList.remove('hidden')
-    }else{
-      option.classList.add('hidden')
-    }
-  } 
-  const check =() =>{
-    if(select){
-      console.log("hujblj");
-      setselect(!select)
-    }
-  }
-  const [select, setselect] = useState(false);
   return (
     <>
     <div className="columns-1 xs:columns-1 sm:columns-2 md:columns-4 lg:columns-6 [&>div:not(:first-child)]:mt-6 p-7">
@@ -97,4 +81,4 @@ export default function Home() {
     </div>
 </>
   )
-}
+};
