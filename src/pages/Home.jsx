@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Home() {
+function Home() {
   return (
     <>
     <div className="columns-1 xs:columns-1 sm:columns-2 md:columns-4 lg:columns-6 [&>img:not(:first-child)]:mt-6 p-7 ">
@@ -34,4 +34,5 @@ export default function Home() {
     </div>
 </>
   )
-}
+};
+export default Home;
