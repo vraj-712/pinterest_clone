@@ -2,6 +2,16 @@ import React, {useRef, useState} from 'react'
 import SinglePhoto from './SinglePhoto';
 
 export default function Home() {
+  function showOption(event){
+    let option = event.currentTarget.children[1]
+    if(option.classList.contains('hidden')){
+      option.classList.remove('hidden')
+      console.log('yess');
+    }else{
+      console.log('no');
+      option.classList.add('hidden')
+    }
+  }
   return (
     <>
     <div className="columns-1 xs:columns-1 sm:columns-2 md:columns-4 lg:columns-6 [&>div:not(:first-child)]:mt-6 p-7">
