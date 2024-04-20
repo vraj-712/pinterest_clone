@@ -21,9 +21,7 @@ export default function Home() {
     let option = event.currentTarget.children[1]
     if(option.classList.contains('hidden')){
       option.classList.remove('hidden')
-      console.log('yess');
     }else{
-      console.log('no');
       option.classList.add('hidden')
     }
   }
