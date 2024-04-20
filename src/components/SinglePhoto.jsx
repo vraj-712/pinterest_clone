@@ -3,8 +3,7 @@ import React from 'react'
 const SinglePhoto = ({showOption, src}) => {
   return (
     <>
-
-        <div onMouseOver={showOption} onMouseOut={showOption} className='relative'>
+      <div onMouseOver={showOption} onMouseOut={showOption} className='relative'>
         <img 
         src={src}
         alt="Image 1"

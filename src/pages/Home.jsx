@@ -1,7 +1,22 @@
-import React, {useRef, useState} from 'react'
-import SinglePhoto from './SinglePhoto';
+import React, {useEffect, useRef, useState} from 'react'
+import SinglePhoto from '../components/SinglePhoto';
 
 export default function Home() {
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(25);
+    useEffect(() => {
+          fetch(`https://api.unsplash.com/photos/?client_id=e6Uz5VlAhjF62cPjpMFM8Q70gLDidculISmcyQffTeo&page=${page}&per_page=${perPage}`)
+          .then((res)=> res.json())
+          .then((res)=> setData(res))
+    }, []);
+    const addPhotos = () => {
+      setPage(page+1);
+      fetch(`https://api.unsplash.com/photos/?client_id=e6Uz5VlAhjF62cPjpMFM8Q70gLDidculISmcyQffTeo&page=${page}&per_page=${perPage}`)
+      .then((res)=> res.json())
+      .then((res)=> setData([...data, ...res]))
+    }
+
   function showOption(event){
     let option = event.currentTarget.children[1]
     if(option.classList.contains('hidden')){
@@ -14,8 +29,8 @@ export default function Home() {
   }
   return (
     <>
-    <div className="columns-1 xs:columns-1 sm:columns-2 md:columns-4 lg:columns-6 [&>div:not(:first-child)]:mt-6 p-7">
-      <SinglePhoto 
+    <div onScroll={() => {console.log('Hello');}} className="check columns-1 xs:columns-1 sm:columns-2 md:columns-4 lg:columns-6 [&>div:not(:first-child)]:mt-6 p-7 mt-16 w-full h-5/6">
+      {/* <SinglePhoto 
         showOption = {showOption}
         src = 'https://i.pinimg.com/236x/e8/aa/b0/e8aab0a8a3cfc9fab339a4b288b872c3.jpg'
       />
@@ -86,8 +101,16 @@ export default function Home() {
       <SinglePhoto 
         showOption = {showOption}
         src = 'https://source.unsplash.com/Ebwp2-6BG8E'
-      />
-    
+      />*/}
+        {data.map((singleData) => (
+          <>
+          <SinglePhoto 
+          key = {singleData.slug + singleData.id}
+          showOption = {showOption}
+          src = {singleData.urls.thumb}
+          />
+          </>
+        ))}
     </div>
 </>
   )
